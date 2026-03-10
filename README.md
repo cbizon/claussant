@@ -38,16 +38,18 @@ For every file whose column names are not documented on a crawled page, Claude r
 
 Files behind authentication or CAPTCHA are marked `blocked` and deferred to the incomplete components file.
 
-### Phase 3 — Write and Validate
+### Phase 3 — Write Outputs
 
 Four output files are written into a versioned directory (`datasets/{name}/{version}/{run}/`):
 
 | File | Purpose |
 |------|---------|
-| `{name}_croissant.json` | Verified Croissant metadata, mlcroissant-validated |
+| `{name}_croissant.json` | Verified Croissant metadata |
 | `{name}_provenance.json` | Source URL for every claim in the Croissant file |
 | `{name}_incomplete.json` | Components that could not be completed from public pages |
 | `{name}_apis.json` | REST API and web tool documentation (not part of the Croissant spec) |
+
+### Phase 4 — Validate
 
 The structural validator (`mlcroissant validate`) is run automatically; every error is fixed before output is delivered. Key fields (`citeAs`, `license`, `name`, `description`) are re-fetched and compared character-by-character against the source page to catch any paraphrasing.
 
