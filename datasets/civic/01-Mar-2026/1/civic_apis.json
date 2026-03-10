@@ -1,0 +1,47 @@
+{
+  "description": "API and tool documentation for CIViC - Clinical Interpretation of Variants in Cancer. Not part of the Croissant file.",
+  "generated": "2026-03-10",
+  "source_url": "https://civic.readthedocs.io/en/latest/api.html",
+  "rest_apis": [
+    {
+      "id": "graphql_v2",
+      "name": "CIViC GraphQL API (V2)",
+      "description": "The current CIViC API uses GraphQL. Supports queries for all CIViC entity types including genes, variants, molecular profiles, evidence items, assertions, diseases, therapies, sources, and data releases. Supports full schema introspection. Rate-limited to 3 requests/second over a 5-minute window by default; API key holders are exempt from this limit.",
+      "url": "https://civicdb.org/api/graphql",
+      "method": "POST",
+      "parameters": [
+        {"name": "query", "description": "GraphQL query string", "type": "string"},
+        {"name": "variables", "description": "Optional JSON object of query variables", "type": "object"}
+      ],
+      "response_formats": ["json"],
+      "notes": "API key can be generated for free to remove rate limits. A graphical query interface (GraphiQL) with example queries is available within the CIViC web application."
+    },
+    {
+      "id": "status",
+      "name": "Status Endpoint",
+      "description": "Returns a JSON object with the current server status and environment.",
+      "url": "https://civicdb.org/api/status",
+      "method": "GET",
+      "parameters": [],
+      "response_formats": ["json"],
+      "notes": "Returns {status, env, displayEnvBanner}."
+    }
+  ],
+  "web_tools": [
+    {
+      "name": "CIViC Web Application",
+      "description": "Browser-based interface for browsing, searching, and curating CIViC data. Includes evidence item submission, revision workflow, community commenting, and statistics dashboards.",
+      "url": "https://civicdb.org"
+    },
+    {
+      "name": "Data Releases Download Page",
+      "description": "Web interface for downloading nightly and historical monthly TSV and VCF data releases.",
+      "url": "https://civicdb.org/releases"
+    },
+    {
+      "name": "CIViCpy",
+      "description": "Python software development and analysis toolkit for the CIViC knowledgebase, recommended for high-throughput or continuous API use. Published in JCO Clinical Cancer Informatics (PMID: 32191543).",
+      "url": "https://civicpy.org"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "description": "Source URLs for every claim in hgnc_croissant.json. Generated 2026-03-10.",
+  "generated": "2026-03-10",
+  "sources": {
+    "src_homepage":      "https://genenames.org/",
+    "src_homepage_html": "https://genenames.org/ (raw HTML, <meta name=Description>)",
+    "src_about":         "https://genenames.org/about/",
+    "src_license":       "https://genenames.org/about/license/",
+    "src_faq":           "https://genenames.org/help/faq/",
+    "src_publications":  "https://genenames.org/about/publications/",
+    "src_download_stats":"https://genenames.org/download/statistics-and-files/",
+    "src_download_archive":"https://genenames.org/download/archive/",
+    "src_data_dict":     "https://genenames.org/help/statistics-and-downloads/",
+    "src_rest_api":      "https://genenames.org/help/rest/",
+    "src_api_info":      "https://rest.genenames.org/info",
+    "src_tsv_header":    "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt (Range: bytes=0-4095)"
+  },
+  "claims": [
+    {
+      "field": "name",
+      "value": "HGNC",
+      "source": "src_about",
+      "note": "The resource is referred to as HGNC throughout the site; RRID is RRID:SCR_002827 for 'HGNC'."
+    },
+    {
+      "field": "description",
+      "value": "The HGNC is a resource for approved human gene nomenclature containing ~42000 gene symbols and names and 1300+ gene families and sets",
+      "source": "src_homepage_html",
+      "note": "Direct quote from <meta name=Description> tag in homepage HTML."
+    },
+    {
+      "field": "url",
+      "value": "https://www.genenames.org",
+      "source": "src_about",
+      "note": "Direct quote from about page: 'All approved symbols are stored in the HGNC database, www.genenames.org'."
+    },
+    {
+      "field": "identifier",
+      "value": "RRID:SCR_002827",
+      "source": "src_about",
+      "note": "Direct quote: 'We are also registered with the Resource Identification Portal RRID:SCR_002827'."
+    },
+    {
+      "field": "version",
+      "value": "2026-03-06",
+      "source": "src_api_info",
+      "note": "Derived from lastModified field in REST API /info endpoint: 2026-03-06T14:08:07.425Z. No explicit version string published on the site."
+    },
+    {
+      "field": "dateModified",
+      "value": "2026-03-06",
+      "source": "src_api_info",
+      "note": "From lastModified field in REST API /info endpoint: 2026-03-06T14:08:07.425Z."
+    },
+    {
+      "field": "license",
+      "value": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "src_license",
+      "note": "Direct quote: 'all data is released under the Creative Commons Public Domain (CC0) License'."
+    },
+    {
+      "field": "conditionsOfAccess",
+      "value": "No restrictions are imposed on access to, or use of, the data provided by the HGNC...",
+      "source": "src_about",
+      "note": "Verbatim data release policy from About page, section 'Data release policy'."
+    },
+    {
+      "field": "isAccessibleForFree",
+      "value": true,
+      "source": "src_about",
+      "note": "Direct quote: 'It is a condition of our funding from NIH that the nomenclature and information we provide is freely available to all.'"
+    },
+    {
+      "field": "citeAs / citation",
+      "value": "Seal RL, Braschi B, Gray K, McClay J, Tweedie S, Bruford EA. Genenames.org: the HGNC and PGNC resources in 2026. Nucleic Acids Res. 2025 Nov 25:gkaf1229. DOI: 10.1093/nar/gkaf1229. PMID: 41287213",
+      "source": "src_publications",
+      "note": "The FAQ page (src_faq) lists this as 'Authors are requested to cite' but contains a typographic error: DOI 10.1093/nar/gkaf1329 (which belongs to the RNAcentral 2026 paper, PMID: 41404707). The publications page (src_publications) lists the correct DOI 10.1093/nar/gkaf1229 paired with PMID: 41287213. The citation value in the Croissant file uses the publications-page version with the correct DOI."
+    },
+    {
+      "field": "creator.name",
+      "value": "HUGO Gene Nomenclature Committee (HGNC)",
+      "source": "src_about",
+      "note": "Full committee name from About page title and body text."
+    },
+    {
+      "field": "creator.parentOrganization.name",
+      "value": "University of Cambridge",
+      "source": "src_about",
+      "note": "Direct quote: 'in November 2023, the team moved to the Addenbrooke's campus in Cambridge' and 'the HGNC became a joint project between the University and the EBI'."
+    },
+    {
+      "field": "funder.name",
+      "value": "US National Human Genome Research Institute (NHGRI)",
+      "source": "src_about",
+      "note": "Direct quote: 'We are a non-profit making body funded by the US National Human Genome Research Institute (NHGRI)'."
+    },
+    {
+      "field": "distribution[hgnc_complete_set_tsv].contentUrl",
+      "value": "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt",
+      "source": "src_download_archive",
+      "note": "Exact href extracted from archive page links."
+    },
+    {
+      "field": "distribution[hgnc_complete_set_tsv].md5",
+      "value": "16ae644b4598083157299c44a6eb418f",
+      "source": "src_tsv_header",
+      "note": "Computed by streaming full file (34071463 bytes) via extract.py md5 mode. No .md5 checksum file provided by the site."
+    },
+    {
+      "field": "distribution[hgnc_complete_set_json].contentUrl",
+      "value": "https://storage.googleapis.com/public-download-files/hgnc/json/json/hgnc_complete_set.json",
+      "source": "src_download_archive",
+      "note": "Exact href extracted from archive page links."
+    },
+    {
+      "field": "distribution[hgnc_complete_set_json].md5",
+      "value": "39d7981d6408775e85ce9d2a552c4ef4",
+      "source": "src_api_info",
+      "note": "Computed by streaming full file (17021427 bytes) via extract.py md5 mode."
+    },
+    {
+      "field": "distribution[withdrawn_tsv].contentUrl",
+      "value": "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/withdrawn.txt",
+      "source": "src_download_archive",
+      "note": "Exact href extracted from archive page links."
+    },
+    {
+      "field": "distribution[withdrawn_tsv].md5",
+      "value": "9aca8b1084453db66ad44f36e4ab9dcf",
+      "source": "src_download_archive",
+      "note": "Computed by streaming full file (657114 bytes) via extract.py md5 mode."
+    },
+    {
+      "field": "distribution[withdrawn_json].contentUrl",
+      "value": "https://storage.googleapis.com/public-download-files/hgnc/json/json/withdrawn.json",
+      "source": "src_download_archive",
+      "note": "Exact href extracted from archive page links."
+    },
+    {
+      "field": "distribution[withdrawn_json].md5",
+      "value": "9517b7ff47ec62ca04a7513b0269fcb1",
+      "source": "src_download_archive",
+      "note": "Computed by streaming full file (258725 bytes) via extract.py md5 mode."
+    },
+    {
+      "field": "distribution[hgnc_owl].contentUrl",
+      "value": "https://storage.googleapis.com/public-download-files/hgnc/owl/owl/hgnc.owl",
+      "source": "src_download_stats",
+      "note": "Direct quote from download statistics page: 'You can find the file at https://storage.googleapis.com/public-download-files/hgnc/owl/owl/hgnc.owl'."
+    },
+    {
+      "field": "distribution[hgnc_owl].description",
+      "value": "Contains all genes in HGNC organised in a shallow hierarchy, classified by locus type and gene group...",
+      "source": "src_download_stats",
+      "note": "Direct quote from download statistics page OWL section."
+    },
+    {
+      "field": "distribution[hgnc_owl].md5",
+      "value": "8db14e98e8121034754ee8ae6f696b66",
+      "source": "src_download_stats",
+      "note": "Computed by streaming full file (170710751 bytes) via extract.py md5 mode."
+    },
+    {
+      "field": "distribution[gene_groups_tsv].contentUrl",
+      "value": "https://genenames.org/cgi-bin/genegroup/download-all",
+      "source": "src_download_stats",
+      "note": "Exact href from JS bundle link: /cgi-bin/genegroup/download-all. Confirmed functional by extract.py tsv."
+    },
+    {
+      "field": "distribution[gene_groups_tsv].md5",
+      "value": "7b351f57ba56565f12c23e01745e452f",
+      "source": "src_download_stats",
+      "note": "Computed by streaming full file (11847457 bytes) via extract.py md5 mode."
+    },
+    {
+      "field": "distribution[gene_groups_json].contentUrl",
+      "value": "https://genenames.org/cgi-bin/genegroup/download-all?format=json",
+      "source": "src_download_stats",
+      "note": "Exact href from JS bundle link: /cgi-bin/genegroup/download-all?format=json."
+    },
+    {
+      "field": "distribution[gene_groups_json].md5",
+      "value": "503aa01299efcf8522feff3eb8440eac",
+      "source": "src_download_stats",
+      "note": "Computed by streaming full file (5992516 bytes) via extract.py md5 mode."
+    },
+    {
+      "field": "recordSet[hgnc_complete_set] field descriptions (all except kznf_gene_catalog)",
+      "value": "53 fields",
+      "source": "src_data_dict",
+      "note": "Column names from extracted TSV header (src_tsv_header); descriptions from data dictionary help page (src_data_dict)."
+    },
+    {
+      "field": "recordSet[hgnc_complete_set]/kznf_gene_catalog description",
+      "value": "unavailable",
+      "source": "src_tsv_header",
+      "note": "Column kznf_gene_catalog is present in the TSV file header but has no entry on the data dictionary help page at https://genenames.org/help/statistics-and-downloads/. Description set to a note explaining this."
+    },
+    {
+      "field": "recordSet[withdrawn] field names",
+      "value": "HGNC_ID, STATUS, WITHDRAWN_SYMBOL, MERGED_INTO_REPORT(S) (i.e HGNC_ID|SYMBOL|STATUS)",
+      "source": "src_tsv_header",
+      "note": "From extract.py tsv on withdrawn.txt. The withdrawn file has no separate data dictionary page; field meanings inferred from column names."
+    },
+    {
+      "field": "recordSet[gene_groups] field names",
+      "value": "HGNC ID, Approved symbol, Approved name, Status, Locus type, Previous symbols, Alias symbols, Chromosome, NCBI Gene ID, Ensembl gene ID, Vega gene ID, Group ID, Group name",
+      "source": "src_download_stats",
+      "note": "From extract.py tsv on /cgi-bin/genegroup/download-all."
+    },
+    {
+      "field": "REST API numDoc (record count)",
+      "value": "46759",
+      "source": "src_api_info",
+      "note": "From numDoc field in REST API /info endpoint response, fetched 2026-03-10."
+    }
+  ]
+}

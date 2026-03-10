@@ -1,0 +1,91 @@
+{
+  "description": "API and tool documentation for HGNC (genenames.org). Not part of the Croissant file.",
+  "generated": "2026-03-10",
+  "source_url": "https://genenames.org/help/rest/",
+  "rest_apis": [
+    {
+      "id": "info",
+      "name": "info",
+      "description": "Returns information about the HGNC REST service, including when the data was last updated (lastModified), the number of documents (numDoc), which fields can be queried using search and fetch (searchableFields), and which fields may be returned by fetch (storedFields).",
+      "url": "https://rest.genenames.org/info",
+      "method": "GET",
+      "parameters": [],
+      "response_formats": ["application/json", "text/xml"],
+      "notes": "Rate limit: 10 requests per second. Exceeding this may result in a 403 IP block. Set Accept header to select format; browsers default to text/xml."
+    },
+    {
+      "id": "fetch",
+      "name": "fetch",
+      "description": "Retrieves full gene symbol records for a specific field/term pair. Returns all stored fields for matching records. Does not accept wildcards.",
+      "url": "https://rest.genenames.org/fetch/{field}/{term}",
+      "method": "GET",
+      "parameters": [
+        {
+          "name": "field",
+          "description": "The field to query. Must be one of the searchableFields returned by /info (e.g. symbol, hgnc_id, status, ensembl_gene_id).",
+          "type": "string",
+          "in": "path"
+        },
+        {
+          "name": "term",
+          "description": "The query term. If it contains spaces, must be double-quoted and URL-encoded (spaces as %20, quotes as %22).",
+          "type": "string",
+          "in": "path"
+        }
+      ],
+      "response_formats": ["application/json", "text/xml"],
+      "examples": [
+        "https://rest.genenames.org/fetch/symbol/BRAF",
+        "https://rest.genenames.org/fetch/hgnc_id/1097",
+        "https://rest.genenames.org/fetch/status/Approved"
+      ],
+      "notes": "Rate limit: 10 requests per second. Fetching all Approved records returns ~38000 entries and takes longer to respond."
+    },
+    {
+      "id": "search",
+      "name": "search",
+      "description": "Searches the HGNC database and returns summary records. Supports wildcards (*, ?), boolean operators (AND, OR, NOT), and field-specific queries.",
+      "url": "https://rest.genenames.org/search/{query}",
+      "method": "GET",
+      "parameters": [
+        {
+          "name": "query",
+          "description": "Search query. Can be a bare term (searches all searchable fields), a field:term pair, or a compound query using AND/OR/NOT. Wildcards * (multiple chars) and ? (single char) are supported. Phrases must be double-quoted and URL-encoded.",
+          "type": "string",
+          "in": "path"
+        }
+      ],
+      "response_formats": ["application/json", "text/xml"],
+      "examples": [
+        "https://rest.genenames.org/search/BRAF",
+        "https://rest.genenames.org/search/symbol/ZNF3",
+        "https://rest.genenames.org/search/symbol/ZNF*",
+        "https://rest.genenames.org/search/symbol:ZNF*+AND+status:Approved",
+        "https://rest.genenames.org/search/symbol:ZNF3+OR+ZNF12"
+      ],
+      "notes": "Rate limit: 10 requests per second. Returns summary fields only; use /fetch to retrieve full records."
+    }
+  ],
+  "web_tools": [
+    {
+      "name": "Gene Symbol Search",
+      "description": "Search the HGNC database by gene symbol, name, alias, or other fields via a web interface.",
+      "url": "https://genenames.org/tools/search/"
+    },
+    {
+      "name": "Custom Downloads",
+      "description": "Interactive tool to select specific fields from HGNC data and download a custom TSV or JSON file.",
+      "url": "https://genenames.org/download/custom/"
+    },
+    {
+      "name": "Multi-Symbol Checker",
+      "description": "Tool to check and update a list of gene symbols against the current HGNC approved set.",
+      "url": "https://genenames.org/tools/multi-symbol-checker/"
+    },
+    {
+      "name": "HCOP (HGNC Comparison of Orthology Predictions)",
+      "description": "Tool to search for orthology predictions for human and other vertebrate genes across multiple databases.",
+      "url": "https://genenames.org/tools/hcop/"
+    }
+  ]
+}

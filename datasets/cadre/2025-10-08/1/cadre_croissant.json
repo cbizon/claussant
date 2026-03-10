@@ -1,0 +1,225 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "sc": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "dct": "http://purl.org/dc/terms/",
+    "annotation": "cr:annotation",
+    "arrayShape": "cr:arrayShape",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "containedIn": "cr:containedIn",
+    "data": {"@id": "cr:data", "@type": "@json"},
+    "dataType": {"@id": "cr:dataType", "@type": "@vocab"},
+    "equivalentProperty": "cr:equivalentProperty",
+    "examples": {"@id": "cr:examples", "@type": "@json"},
+    "excludes": "cr:excludes",
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isArray": "cr:isArray",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "readLines": "cr:readLines",
+    "sdVersion": "cr:sdVersion",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "unArchive": "cr:unArchive",
+    "value": "cr:value"
+  },
+  "@type": "https://schema.org/Dataset",
+  "@id": "cadre",
+  "conformsTo": "http://mlcommons.org/croissant/1.1",
+  "name": "Children's Allergy and Asthma Data Repository (CADRE)",
+  "description": "The Children's Allergy and Asthma Data Repository (CADRE) is a centralized resource created to address a critical gap in asthma research: identifying the risk factors and biological mechanisms that lead to childhood asthma. By uniting data from various cohorts, CADRE empowers researchers to uncover insights that individual studies alone cannot provide. CADRE brings together data from NIH funded allergy and asthma cohort studies to harmonize data for future collaborative studies, leveraging data collected through the Children's Respiratory and Environmental Workgroup (CREW). The dataset includes data on 9,600 newborns recruited over a 40+ year time span with broad representation of race/ethnicity, allergy and asthma risk, neighborhood characteristics, and geographic regions.",
+  "url": "https://cadre.med.wisc.edu/",
+  "version": "2025-10-08",
+  "dateModified": "2025-10-08",
+  "inLanguage": "en",
+  "keywords": [
+    "childhood asthma",
+    "allergy",
+    "birth cohort",
+    "harmonized data",
+    "CREW",
+    "epidemiology",
+    "environmental exposures",
+    "NIH",
+    "NIAID"
+  ],
+  "conditionsOfAccess": "Data dictionaries describing the harmonized variables are publicly available for download. Access to the harmonized participant dataset requires contacting the CADRE team via the online contact form at https://redcap.wisc.edu/surveys/?s=AYTTTFACXLP83XYL or by email at gmcmahan@wisc.edu.",
+  "creator": {
+    "@type": "https://schema.org/Organization",
+    "name": "University of Wisconsin–Madison",
+    "url": "https://www.wisc.edu",
+    "parentOrganization": {
+      "@type": "https://schema.org/Organization",
+      "name": "Universities of Wisconsin",
+      "url": "https://www.wisconsin.edu/"
+    }
+  },
+  "funder": [
+    {
+      "@type": "https://schema.org/Organization",
+      "name": "National Institute of Allergy and Infectious Diseases (NIAID), Division of Allergy Immunology and Transplantation and Office of Data Science and Emerging Technologies",
+      "url": "https://www.niaid.nih.gov/"
+    },
+    {
+      "@type": "https://schema.org/Organization",
+      "name": "NIH Office of the Director, Office of Data Science Strategy",
+      "url": "https://www.nih.gov/institutes-nih/nih-office-director"
+    }
+  ],
+  "maintainer": {
+    "@type": "https://schema.org/Person",
+    "email": "gmcmahan@wisc.edu"
+  },
+  "temporalCoverage": "1980/..",
+  "spatialCoverage": {
+    "@type": "https://schema.org/Place",
+    "name": "United States"
+  },
+  "distribution": [
+    {
+      "@type": "http://mlcommons.org/croissant/FileObject",
+      "@id": "cadre/core_data_elements_csv",
+      "name": "core_data_elements_csv",
+      "description": "Downloadable CSV spreadsheet listing the 200 core harmonized variables used most frequently in CREW and CADRE publications, with descriptions and response options for each variable.",
+      "contentUrl": "https://cadre.med.wisc.edu/wp-content/uploads/sites/2407/2026/01/CADRE_Core_Data_Elements_2025_10_07.csv",
+      "encodingFormat": "text/csv",
+      "version": "2025-10-07",
+      "md5": "ed587ce2bc8f719108f549a17219626e"
+    },
+    {
+      "@type": "http://mlcommons.org/croissant/FileObject",
+      "@id": "cadre/ancillary_data_elements_csv",
+      "name": "ancillary_data_elements_csv",
+      "description": "Downloadable CSV spreadsheet listing additional harmonized variables beyond the core set, organized by dataset, with descriptions and response options.",
+      "contentUrl": "https://cadre.med.wisc.edu/wp-content/uploads/sites/2407/2026/01/CADRE_Ancillary_Data_Elements_2025_10_08.csv",
+      "encodingFormat": "text/csv",
+      "version": "2025-10-08",
+      "md5": "b484d720f00f92025228e21eb87b0dba"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "http://mlcommons.org/croissant/RecordSet",
+      "@id": "cadre/core_data_elements",
+      "name": "core_data_elements",
+      "description": "Records from the CADRE Core Data Elements spreadsheet. Each row describes one harmonized variable, including its name, description, and response options.",
+      "field": [
+        {
+          "@type": "http://mlcommons.org/croissant/Field",
+          "@id": "cadre/core_data_elements/Data_element",
+          "name": "Data_element",
+          "description": "Short name or code for the harmonized variable.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "cadre/core_data_elements_csv"},
+            "extract": {"column": "Data element"}
+          }
+        },
+        {
+          "@type": "http://mlcommons.org/croissant/Field",
+          "@id": "cadre/core_data_elements/Description",
+          "name": "Description",
+          "description": "Human-readable description of the harmonized variable.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "cadre/core_data_elements_csv"},
+            "extract": {"column": "Description"}
+          }
+        },
+        {
+          "@type": "http://mlcommons.org/croissant/Field",
+          "@id": "cadre/core_data_elements/Response_options",
+          "name": "Response_options",
+          "description": "Allowed values or coding scheme for the variable (e.g. 0=No, 1=Yes, or a list of category labels).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "cadre/core_data_elements_csv"},
+            "extract": {"column": "Response options"}
+          }
+        }
+      ]
+    },
+    {
+      "@type": "http://mlcommons.org/croissant/RecordSet",
+      "@id": "cadre/ancillary_data_elements",
+      "name": "ancillary_data_elements",
+      "description": "Records from the CADRE Ancillary Data Elements spreadsheet. Each row describes one harmonized variable that has been used less frequently than the core set, organized by dataset.",
+      "field": [
+        {
+          "@type": "http://mlcommons.org/croissant/Field",
+          "@id": "cadre/ancillary_data_elements/Dataset",
+          "name": "Dataset",
+          "description": "Name of the dataset or data domain to which this variable belongs (e.g. Aeroallergen).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "cadre/ancillary_data_elements_csv"},
+            "extract": {"column": "Dataset"}
+          }
+        },
+        {
+          "@type": "http://mlcommons.org/croissant/Field",
+          "@id": "cadre/ancillary_data_elements/Dataset_ordinal",
+          "name": "Dataset_ordinal",
+          "description": "Ordinal position of the variable within its dataset.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {"@id": "cadre/ancillary_data_elements_csv"},
+            "extract": {"column": "Dataset ordinal"}
+          }
+        },
+        {
+          "@type": "http://mlcommons.org/croissant/Field",
+          "@id": "cadre/ancillary_data_elements/Data_element",
+          "name": "Data_element",
+          "description": "Short name or code for the harmonized variable.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "cadre/ancillary_data_elements_csv"},
+            "extract": {"column": "Data element"}
+          }
+        },
+        {
+          "@type": "http://mlcommons.org/croissant/Field",
+          "@id": "cadre/ancillary_data_elements/Description",
+          "name": "Description",
+          "description": "Human-readable description of the harmonized variable.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "cadre/ancillary_data_elements_csv"},
+            "extract": {"column": "Description"}
+          }
+        },
+        {
+          "@type": "http://mlcommons.org/croissant/Field",
+          "@id": "cadre/ancillary_data_elements/Response_options",
+          "name": "Response_options",
+          "description": "Allowed values or coding scheme for the variable.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "cadre/ancillary_data_elements_csv"},
+            "extract": {"column": "Response options"}
+          }
+        }
+      ]
+    }
+  ]
+}

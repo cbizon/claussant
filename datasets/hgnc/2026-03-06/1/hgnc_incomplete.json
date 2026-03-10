@@ -1,0 +1,40 @@
+{
+  "description": "Croissant components for HGNC that could not be completed from crawled pages alone.",
+  "generated": "2026-03-10",
+  "items": [
+    {
+      "component_type": "https://schema.org/Dataset",
+      "id": "hgnc",
+      "field": "datePublished",
+      "reason": "No explicit publication date for genenames.org as a resource was found on any crawled page. The HGNC committee was established in 1979 and the website has existed since the 1990s, but no founding or launch date is stated on the current site.",
+      "how_to_complete": "Check https://genenames.org/about/ or https://genenames.org/news/ for a stated launch or first publication date."
+    },
+    {
+      "component_type": "https://schema.org/Dataset",
+      "id": "hgnc",
+      "field": "citation DOI (FAQ page)",
+      "reason": "The FAQ page at https://genenames.org/help/faq/ lists DOI 10.1093/nar/gkaf1329 for the HGNC 2026 paper, but this DOI belongs to the RNAcentral 2026 paper (PMID: 41404707). The publications page lists the correct DOI 10.1093/nar/gkaf1229. The Croissant file uses the publications-page DOI, but the FAQ page should be corrected by the data owners.",
+      "how_to_complete": "Contact HGNC via https://genenames.org/contact/feedback to report the DOI typo on the FAQ page."
+    },
+    {
+      "component_type": "http://mlcommons.org/croissant/Field",
+      "id": "hgnc/hgnc_complete_set/kznf_gene_catalog",
+      "reason": "The column kznf_gene_catalog appears in the TSV file header but has no entry in the data dictionary help page at https://genenames.org/help/statistics-and-downloads/. No description could be sourced from any crawled page.",
+      "how_to_complete": "Download the complete set TSV and inspect representative values, or contact HGNC to ask for a field description."
+    },
+    {
+      "component_type": "http://mlcommons.org/croissant/RecordSet",
+      "id": "hgnc/withdrawn",
+      "field": "field descriptions",
+      "reason": "The withdrawn symbols file (withdrawn.txt / withdrawn.json) has no dedicated data dictionary page. Field meanings were inferred from the column names (HGNC_ID, STATUS, WITHDRAWN_SYMBOL, MERGED_INTO_REPORT(S)) rather than from an authoritative description.",
+      "how_to_complete": "Check https://genenames.org/help/statistics-and-downloads/ for any new withdrawn-file documentation, or contact HGNC."
+    },
+    {
+      "component_type": "https://schema.org/Dataset",
+      "id": "hgnc",
+      "field": "checksums (live files)",
+      "reason": "The md5 checksums in the Croissant file were computed by streaming downloads on 2026-03-10. The main files (hgnc_complete_set.txt, hgnc_complete_set.json, etc.) are updated regularly; these checksums will become stale after the next data release.",
+      "how_to_complete": "Re-run extract.py md5 on each file URL after each data release to obtain fresh checksums."
+    }
+  ]
+}

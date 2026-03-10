@@ -1,0 +1,361 @@
+{
+  "description": "Provenance records for bindingdb_croissant.json.",
+  "crawl_date": "2026-03-10",
+  "crawled_urls": [
+    {
+      "id": "src_homepage",
+      "url": "https://www.bindingdb.org/rwd/bind/index.jsp",
+      "anchor": null,
+      "description": "Homepage: name, tagline, record counts, funder statement."
+    },
+    {
+      "id": "src_about",
+      "url": "https://www.bindingdb.org/rwd/bind/aboutus.jsp",
+      "anchor": null,
+      "description": "About page: mission, contact, staff, funder grants, disclaimer."
+    },
+    {
+      "id": "src_info",
+      "url": "https://www.bindingdb.org/rwd/bind/info.jsp",
+      "anchor": null,
+      "description": "Info page: full description, license statements, all references/citations."
+    },
+    {
+      "id": "src_download",
+      "url": "https://www.bindingdb.org/rwd/bind/chemsearch/marvin/Download.jsp",
+      "anchor": null,
+      "description": "Download page: file URLs, sizes, update dates, MD5 links."
+    },
+    {
+      "id": "src_api",
+      "url": "https://www.bindingdb.org/rwd/bind/BindingDBRESTfulAPI.jsp",
+      "anchor": null,
+      "description": "REST API page: endpoint names, parameters, example URLs."
+    },
+    {
+      "id": "src_faq",
+      "url": "https://www.bindingdb.org/rwd/bind/FAQ2.jsp",
+      "anchor": null,
+      "description": "FAQ page: how-to guidance, confirms public access."
+    },
+    {
+      "id": "src_tsv_header",
+      "url": "https://www.bindingdb.org/rwd/bind/downloads/BindingDB_All_202603_tsv.zip",
+      "anchor": null,
+      "description": "Partial download of all-data TSV ZIP: extracted 112-column header row."
+    },
+    {
+      "id": "src_sdf_props",
+      "url": "https://www.bindingdb.org/rwd/bind/downloads/BindingDB_All_2D_202603_sdf.zip",
+      "anchor": null,
+      "description": "Partial download of All 2D SDF ZIP: extracted SDF property names from first record."
+    },
+    {
+      "id": "src_md5_all_tsv",
+      "url": "https://www.bindingdb.org/rwd/bind/downloads/BindingDB_All_202603_tsv.md5",
+      "anchor": null,
+      "description": "MD5 checksum for all-data TSV ZIP."
+    },
+    {
+      "id": "src_uniprot_file",
+      "url": "https://www.bindingdb.org/rwd/bind/BindingDB_UniProt.txt",
+      "anchor": null,
+      "description": "UniProt mapping file: confirmed header row and full-file MD5."
+    },
+    {
+      "id": "src_cid_file",
+      "url": "https://www.bindingdb.org/rwd/bind/BindingDB_CID.txt",
+      "anchor": null,
+      "description": "CID mapping file: confirmed tab-separated no-header format and full-file MD5."
+    },
+    {
+      "id": "src_sid_file",
+      "url": "https://www.bindingdb.org/rwd/bind/BindingDB_SID.txt",
+      "anchor": null,
+      "description": "SID mapping file: confirmed format and MD5."
+    },
+    {
+      "id": "src_drugbank_file",
+      "url": "https://www.bindingdb.org/rwd/bind/BindingDB_DrugBankID.txt",
+      "anchor": null,
+      "description": "DrugBank mapping file: confirmed format and MD5."
+    },
+    {
+      "id": "src_pubmed_file",
+      "url": "https://www.bindingdb.org/rwd/bind/BindingDB_PubMed.txt",
+      "anchor": null,
+      "description": "PubMed IDs file: confirmed single-column format and MD5."
+    },
+    {
+      "id": "src_fasta_file",
+      "url": "https://www.bindingdb.org/rwd/bind/BindingDBTargetSequences.fasta",
+      "anchor": null,
+      "description": "Target FASTA file: confirmed FASTA format and full-file MD5."
+    }
+  ],
+  "claims": [
+    {
+      "croissant_id": "bindingdb/name",
+      "value": "BindingDB",
+      "sources": [
+        "src_homepage"
+      ],
+      "notes": "Page title and heading on homepage."
+    },
+    {
+      "croissant_id": "bindingdb/description",
+      "value": "BindingDB is a public, web-accessible database of measured binding affinities...",
+      "sources": [
+        "src_info"
+      ],
+      "notes": "Direct quote of opening paragraph from info.jsp."
+    },
+    {
+      "croissant_id": "bindingdb/url",
+      "value": "https://www.bindingdb.org/rwd/bind/index.jsp",
+      "sources": [
+        "src_homepage"
+      ],
+      "notes": "Canonical URL after redirect from https://www.bindingdb.org/."
+    },
+    {
+      "croissant_id": "bindingdb/identifier",
+      "value": "https://fairsharing.org/FAIRsharing.3b36hk",
+      "sources": [
+        "src_homepage",
+        "src_info"
+      ],
+      "notes": "Linked from homepage and info page: 'BindingDB is a FAIRsharing resource.'"
+    },
+    {
+      "croissant_id": "bindingdb/version",
+      "value": "202603",
+      "sources": [
+        "src_download"
+      ],
+      "notes": "File naming convention on download page uses YYYYMM suffix."
+    },
+    {
+      "croissant_id": "bindingdb/license",
+      "value": "https://creativecommons.org/licenses/by/3.0/us/",
+      "sources": [
+        "src_info"
+      ],
+      "notes": "Direct quote from info.jsp: 'All data curated by BindingDB staff are provided under the Creative Commons Attribution 3.0 License.' Link href confirmed as https://creativecommons.org/licenses/by/3.0/us/."
+    },
+    {
+      "croissant_id": "bindingdb/conditionsOfAccess",
+      "value": "All data curated by BindingDB staff are provided under the Creative Commons Attribution 3.0 License. Data imported from ChEMBL are provided under their Creative Commons Attribution-Share Alike 3.0 Unported License.",
+      "sources": [
+        "src_info"
+      ],
+      "notes": "Direct quote combining both license sentences from info.jsp."
+    },
+    {
+      "croissant_id": "bindingdb/isAccessibleForFree",
+      "value": true,
+      "sources": [
+        "src_homepage",
+        "src_faq"
+      ],
+      "notes": "No login required for browsing or downloading."
+    },
+    {
+      "croissant_id": "bindingdb/isLiveDataset",
+      "value": true,
+      "sources": [
+        "src_download"
+      ],
+      "notes": "Download page states: 'These files updated when new data are added, usually monthly.'"
+    },
+    {
+      "croissant_id": "bindingdb/dateModified",
+      "value": "2026-03-01",
+      "sources": [
+        "src_download"
+      ],
+      "notes": "Most recent update date of main data files on download page."
+    },
+    {
+      "croissant_id": "bindingdb/citeAs",
+      "value": "Liu,T., Hwang, L., Burley,S.K., Nitsche,C.I., Southan,C., Walters,W.P., and Gilson,M.K. BindingDB in 2024: a FAIR knowledgebase of protein-small molecule binding data Nucleic Acids Research 53:D1633-D1644 (2025).",
+      "sources": [
+        "src_info"
+      ],
+      "notes": "First reference in References section of info.jsp (most recent publication). Trailing [pdf] stripped."
+    },
+    {
+      "croissant_id": "bindingdb/creator",
+      "value": "Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California San Diego",
+      "sources": [
+        "src_about",
+        "src_homepage"
+      ],
+      "notes": "About page: 'Skaggs School of Pharmacy & Pharmaceutical Sciences, 9500 Gilman Drive, MC 0751, La Jolla, California, 92093-0751'. Homepage links to https://pharmacy.ucsd.edu/ and https://ucsd.edu/."
+    },
+    {
+      "croissant_id": "bindingdb/funder",
+      "value": "National Institute of General Medical Sciences, National Institutes of Health",
+      "sources": [
+        "src_about",
+        "src_homepage"
+      ],
+      "notes": "About page: 'This project is supported by NIH grant R24GM144232'. Homepage: 'supported by NIH National Institute of General Medical Sciences (GM070064)'."
+    },
+    {
+      "croissant_id": "bindingdb/maintainer",
+      "value": "Michael K. Gilson, mgilson@health.ucsd.edu",
+      "sources": [
+        "src_about"
+      ],
+      "notes": "About page Staff Directory: 'PI: Michael K. Gilson, Ph.D., M.D. Email: mgilson@health.ucsd.edu'"
+    },
+    {
+      "croissant_id": "bindingdb/relatedLink",
+      "value": "bindingdb_apis.json",
+      "sources": [
+        "src_api"
+      ],
+      "notes": "REST API documented at BindingDBRESTfulAPI.jsp."
+    },
+    {
+      "croissant_id": "all_tsv_zip/contentUrl",
+      "value": "https://www.bindingdb.org/rwd/bind/downloads/BindingDB_All_202603_tsv.zip",
+      "sources": [
+        "src_download",
+        "src_tsv_header"
+      ],
+      "notes": "Direct URL confirmed accessible; used by extract.py for header extraction."
+    },
+    {
+      "croissant_id": "all_tsv_zip/md5",
+      "value": "1204a116ba13487e3882b7d066b7362e",
+      "sources": [
+        "src_md5_all_tsv"
+      ],
+      "notes": "Fetched from https://www.bindingdb.org/rwd/bind/downloads/BindingDB_All_202603_tsv.md5."
+    },
+    {
+      "croissant_id": "binding_data/field",
+      "value": "112 fields",
+      "sources": [
+        "src_tsv_header"
+      ],
+      "notes": "All 112 column names confirmed verbatim from header row of BindingDB_All.tsv inside the ZIP."
+    },
+    {
+      "croissant_id": "uniprot_txt/md5",
+      "value": "ed1acaeef8a126fc19573e0b4940b933",
+      "sources": [
+        "src_uniprot_file"
+      ],
+      "notes": "Computed by streaming full download."
+    },
+    {
+      "croissant_id": "cid_txt/md5",
+      "value": "fc6c56f4d4751b2eab11ef1c03c1f834",
+      "sources": [
+        "src_cid_file"
+      ],
+      "notes": "Computed by streaming full download."
+    },
+    {
+      "croissant_id": "sid_txt/md5",
+      "value": "969015fb752c48a4232333fed1f2ea91",
+      "sources": [
+        "src_sid_file"
+      ],
+      "notes": "Computed by streaming full download."
+    },
+    {
+      "croissant_id": "drugbank_txt/md5",
+      "value": "d212bc3dbc7c2350cf6d87245b9673c5",
+      "sources": [
+        "src_drugbank_file"
+      ],
+      "notes": "Computed by streaming full download."
+    },
+    {
+      "croissant_id": "pubmed_txt/md5",
+      "value": "95e6a7e9d57c087e3ca71e548df0c6a3",
+      "sources": [
+        "src_pubmed_file"
+      ],
+      "notes": "Computed by streaming full download."
+    },
+    {
+      "croissant_id": "target_fasta/md5",
+      "value": "af58431ae66d4925ee9a29b23bf77ee7",
+      "sources": [
+        "src_fasta_file"
+      ],
+      "notes": "Computed by streaming full download."
+    },
+    {
+      "croissant_id": "mysql_dump_zip/md5",
+      "value": "ff6a5d861ff6ef6af954b5e26b2a1bf2",
+      "sources": [
+        "src_download"
+      ],
+      "notes": "Fetched from https://www.bindingdb.org/rwd/bind/BDB-mySQL_All_202603_dmp.md5."
+    },
+    {
+      "croissant_id": "oracle_dump_zip/md5",
+      "value": "fa9512f1d7da04f3c1fce2644974e5ed",
+      "sources": [
+        "src_download"
+      ],
+      "notes": "Fetched from https://www.bindingdb.org/rwd/bind/BDB-Oracle_All_202502_dmp.md5."
+    },
+    {
+      "croissant_id": "uniprot_mapping/polymerid",
+      "value": "polymerid",
+      "sources": [
+        "src_uniprot_file"
+      ],
+      "notes": "Direct quote from header row of BindingDB_UniProt.txt."
+    },
+    {
+      "croissant_id": "uniprot_mapping/uniprot_id",
+      "value": "UniProt",
+      "sources": [
+        "src_uniprot_file"
+      ],
+      "notes": "Direct quote from header row of BindingDB_UniProt.txt."
+    },
+    {
+      "croissant_id": "uniprot_mapping/bindingdb_name",
+      "value": "BindingDB Name",
+      "sources": [
+        "src_uniprot_file"
+      ],
+      "notes": "Direct quote from header row of BindingDB_UniProt.txt."
+    }
+  ],
+  "unverified_or_inferred": [
+    {
+      "croissant_id": "bindingdb/datePublished",
+      "note": "No explicit launch date found on any crawled page. Omitted."
+    },
+    {
+      "croissant_id": "bindingdb/temporalCoverage",
+      "note": "Data spans from 1965 per curation table on homepage but not stated as an explicit temporalCoverage. Omitted."
+    },
+    {
+      "croissant_id": "cid_txt/columns",
+      "note": "No header row in BindingDB_CID.txt. Columns (BindingDB MonomerID, PubChem CID) inferred from download page description. No RecordSet defined."
+    },
+    {
+      "croissant_id": "sid_txt/columns",
+      "note": "No header row in BindingDB_SID.txt. Columns inferred from description. No RecordSet defined."
+    },
+    {
+      "croissant_id": "drugbank_txt/columns",
+      "note": "No header row in BindingDB_DrugBankID.txt. Columns inferred from description. No RecordSet defined."
+    },
+    {
+      "croissant_id": "pubmed_txt/column",
+      "note": "No header row in BindingDB_PubMed.txt. Single PubMed ID column inferred from description. No RecordSet defined."
+    }
+  ]
+}

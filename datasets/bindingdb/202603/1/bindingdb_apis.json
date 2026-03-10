@@ -1,0 +1,165 @@
+{
+  "description": "API and tool documentation for BindingDB. Not part of the Croissant file.",
+  "generated": "2026-03-10",
+  "source_url": "https://www.bindingdb.org/rwd/bind/BindingDBRESTfulAPI.jsp",
+  "rest_apis": [
+    {
+      "id": "getLigandsByPDBs",
+      "name": "getLigandsByPDBs",
+      "description": "Returns all binding data for protein-ligand pairs where the protein has sequence identity at or above the requested cutoff to the protein in the requested PDB, and the affinity is at or better than the requested cutoff. Affinity may be IC50, Ki, or Kd.",
+      "url": "http://bindingdb.org/rest/getLigandsByPDBs",
+      "method": "GET",
+      "parameters": [
+        {
+          "name": "pdb",
+          "description": "Comma-separated PDB IDs.",
+          "type": "string"
+        },
+        {
+          "name": "cutoff",
+          "description": "Affinity cutoff in nM.",
+          "type": "integer"
+        },
+        {
+          "name": "identity",
+          "description": "Sequence identity cutoff in percent.",
+          "type": "integer"
+        },
+        {
+          "name": "response",
+          "description": "Response format. Use 'application/json' for JSON; default is XML.",
+          "type": "string"
+        }
+      ],
+      "response_formats": [
+        "xml",
+        "json"
+      ],
+      "example": "http://bindingdb.org/rest/getLigandsByPDBs?pdb=1Q0L,3ANM&cutoff=100&identity=92&response=application/json"
+    },
+    {
+      "id": "getLigandsByUniprots",
+      "name": "getLigandsByUniprots",
+      "description": "Returns all binding data for proteins with the given UniProt identifiers (comma-separated), within an optional affinity cutoff.",
+      "url": "http://bindingdb.org/rest/getLigandsByUniprots",
+      "method": "GET",
+      "parameters": [
+        {
+          "name": "uniprot",
+          "description": "Comma-separated UniProt accessions.",
+          "type": "string"
+        },
+        {
+          "name": "cutoff",
+          "description": "Affinity cutoff in nM.",
+          "type": "integer"
+        },
+        {
+          "name": "response",
+          "description": "Response format. Use 'application/json' for JSON; default is XML.",
+          "type": "string"
+        }
+      ],
+      "response_formats": [
+        "xml",
+        "json"
+      ],
+      "example": "http://bindingdb.org/rest/getLigandsByUniprots?uniprot=P00176,P00183&cutoff=10000&response=application/json"
+    },
+    {
+      "id": "getLigandsByUniprot",
+      "name": "getLigandsByUniprot",
+      "description": "Returns all binding data for a single protein given its UniProt identifier, within an optional IC50 affinity cutoff.",
+      "url": "https://bindingdb.org/rest/getLigandsByUniprot",
+      "method": "GET",
+      "parameters": [
+        {
+          "name": "uniprot",
+          "description": "UniProt accession, optionally followed by semicolon and IC50 cutoff in nM (e.g. P35355;100).",
+          "type": "string"
+        },
+        {
+          "name": "response",
+          "description": "Response format. Use 'application/json' for JSON; default is XML.",
+          "type": "string"
+        }
+      ],
+      "response_formats": [
+        "xml",
+        "json"
+      ],
+      "example": "https://bindingdb.org/rest/getLigandsByUniprot?uniprot=P35355;100&response=application/json"
+    },
+    {
+      "id": "getTargetByCompound",
+      "name": "getTargetByCompound",
+      "description": "Retrieves binding data for a user-described compound. Screens BindingDB for structurally similar compounds (within a similarity cutoff) and returns those compounds with their protein targets and affinity data.",
+      "url": "https://bindingdb.org/rest/getTargetByCompound",
+      "method": "GET",
+      "parameters": [
+        {
+          "name": "smiles",
+          "description": "SMILES string of the query compound (URL-encoded).",
+          "type": "string"
+        },
+        {
+          "name": "cutoff",
+          "description": "Tanimoto similarity cutoff (0.0-1.0).",
+          "type": "number"
+        },
+        {
+          "name": "response",
+          "description": "Response format. Use 'application/json' for JSON; default is XML.",
+          "type": "string"
+        }
+      ],
+      "response_formats": [
+        "xml",
+        "json"
+      ],
+      "example": "https://bindingdb.org/rest/getTargetByCompound?smiles=CCC%5BN%2B%5D%28C%29%28C%29CCn1nncc1COc1cc%28%3DO%29n%28C%29c2ccccc12&cutoff=0.85&response=application/json"
+    }
+  ],
+  "web_tools": [
+    {
+      "name": "Advanced Search",
+      "description": "Interactive search by target name, sequence (BLAST), binding characteristics (Ki, IC50, Kd, EC50, pH), ligand name, SMILES, molecular weight, author, institution, PubMed ID, PubChem BioAssay ID, patent, or PDB/UniProt cross-reference.",
+      "url": "https://www.bindingdb.org/rwd/bind/index.jsp"
+    },
+    {
+      "name": "Chemical Structure Search (MarvinSketch)",
+      "description": "2D substructure and similarity search using an embedded ChemAxon MarvinSketch drawing interface.",
+      "url": "https://www.bindingdb.org/rwd/bind/chemsearch/marvin/index.jsp"
+    },
+    {
+      "name": "Find My Compound Targets (FMCT)",
+      "description": "Batch structure search: upload a file of compound structures to find their potential protein targets.",
+      "url": "https://www.bindingdb.org/rwd/bind/chemsearch/marvin/FMCT.jsp"
+    },
+    {
+      "name": "Virtual Screening (Surflex)",
+      "description": "Online docking service using the Surflex program.",
+      "url": "https://www.bindingdb.org/rwd/bind/surflex_entry.jsp"
+    },
+    {
+      "name": "BindingX",
+      "description": "Cross-database binding data explorer.",
+      "url": "https://www.bindingdb.org/rwd/bind/BindingX.jsp"
+    },
+    {
+      "name": "BDBFind Browser Extension",
+      "description": "Browser extension (Chrome and Firefox) that automatically alerts users when BindingDB has data from a PubMed article or patent they are viewing.",
+      "url": "https://chrome.google.com/webstore/search/bdbfind"
+    },
+    {
+      "name": "KNIME Workflows",
+      "description": "Pre-built KNIME workflows for data retrieval and target-prediction from BindingDB.",
+      "url": "https://www.bindingdb.org/rwd/bind/chemsearch/marvin/Download.jsp"
+    },
+    {
+      "name": "Long-term Archive (UCSD Library)",
+      "description": "Quarterly archived snapshots of BindingDB deposited at the UCSD digital library. Recommended for citing a specific version for AI training documentation.",
+      "url": "https://library.ucsd.edu/dc/collection/bb03870458"
+    }
+  ]
+}

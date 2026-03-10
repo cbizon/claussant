@@ -1,0 +1,78 @@
+{
+  "description": "Croissant components for BindingDB that could not be completed from crawled pages alone.",
+  "generated": "2026-03-10",
+  "items": [
+    {
+      "component_type": "http://mlcommons.org/croissant/RecordSet",
+      "id": "bindingdb/sdf_binding_data",
+      "reason": "SDF property schema documented in BindingDB-SDfile-Specification.pdf (linked from Download page). The PDF could not be parsed as text during this session. Partial extraction from BindingDB_All_2D_202603_sdf.zip retrieved chain-1 property names only; chains 2-6 fields were not visible in the partial download of the first SDF record.",
+      "how_to_complete": "Download https://www.bindingdb.org/rwd/bind/chemsearch/marvin/BindingDB-SDfile-Specification.pdf and extract the full property list, or run: python3 references/extract.py sdf-zip <url> against a multi-chain record. Chain fields follow the same naming pattern as the TSV schema (e.g. 'BindingDB Target Chain 2 Sequence', etc.)."
+    },
+    {
+      "component_type": "http://mlcommons.org/croissant/RecordSet",
+      "id": "bindingdb/mysql_schema",
+      "reason": "Partial download of BDB-mySQL_All_202603_dmp.zip retrieved only the first CREATE TABLE statement (art_aut). The dump contains many additional tables whose schemas were not captured.",
+      "how_to_complete": "Run: python3 references/extract.py mysql-zip https://www.bindingdb.org/rwd/bind/BDB-mySQL_All_202603_dmp.zip with a larger fetch range, or download and decompress the full dump file."
+    },
+    {
+      "component_type": "http://mlcommons.org/croissant/RecordSet",
+      "id": "bindingdb/cid_mapping",
+      "reason": "BindingDB_CID.txt has no header row. Column names (BindingDB MonomerID, PubChem CID) can only be inferred from the download page description, not extracted.",
+      "how_to_complete": "Inspect the file and confirm column order from context, then define a RecordSet with fields sourcing by column index or after adding a header."
+    },
+    {
+      "component_type": "http://mlcommons.org/croissant/RecordSet",
+      "id": "bindingdb/sid_mapping",
+      "reason": "BindingDB_SID.txt has no header row. Same situation as cid_mapping.",
+      "how_to_complete": "Same as cid_mapping."
+    },
+    {
+      "component_type": "http://mlcommons.org/croissant/RecordSet",
+      "id": "bindingdb/drugbank_mapping",
+      "reason": "BindingDB_DrugBankID.txt has no header row. Same situation as cid_mapping.",
+      "how_to_complete": "Same as cid_mapping."
+    },
+    {
+      "component_type": "http://mlcommons.org/croissant/RecordSet",
+      "id": "bindingdb/pubmed_ids",
+      "reason": "BindingDB_PubMed.txt has no header row and is a single-column list. Croissant column extraction requires a named column.",
+      "how_to_complete": "Define a single-field RecordSet using fileProperty extraction if the validator supports it, or add a header row before distribution."
+    },
+    {
+      "component_type": "https://schema.org/FileObject",
+      "id": "bindingdb/chebi_id_txt",
+      "reason": "BindingDB_CHEBI_ID.txt is listed on the download page but has 0 bytes as of 2026-03-05. No content to document.",
+      "how_to_complete": "Check again in a future crawl; include once the file contains data."
+    },
+    {
+      "component_type": "https://schema.org/FileObject",
+      "id": "bindingdb/validation_sets_zip",
+      "reason": "BindingDBValidationSets.zip (91.31 MB, updated 2025-09-04) is listed on the download page but no MD5 sidecar file was found. The checksum required by Croissant could not be fetched without downloading the full archive.",
+      "how_to_complete": "Compute MD5 by streaming: python3 -c \"import requests,hashlib; h=hashlib.md5(); [h.update(c) for c in requests.get('https://www.bindingdb.org/rwd/bind/downloads/BindingDBValidationSets.zip',stream=True).iter_content(65536)]; print(h.hexdigest())\""
+    },
+    {
+      "component_type": "https://schema.org/FileObject",
+      "id": "bindingdb/jchem3d_sdf_zip",
+      "reason": "BindingDB_JChem3D.sdf.zip (404.63 MB, updated 2025-03-26) is listed on the download page but no MD5 sidecar was found.",
+      "how_to_complete": "Compute MD5 by streaming download as above."
+    },
+    {
+      "component_type": "https://schema.org/FileObject",
+      "id": "bindingdb/surflex_tar",
+      "reason": "surflex.tar (8.61 GB docked complexes, updated 2025-03-27) is listed on the download page but no MD5 sidecar was found.",
+      "how_to_complete": "Compute MD5 via streaming. Note this file is very large (8.61 GB)."
+    },
+    {
+      "component_type": "https://schema.org/FileObject",
+      "id": "bindingdb/knime_workflow",
+      "reason": "BindingDB_workflows.knwf (188.97 KB) is listed on the download page but no MD5 sidecar was found.",
+      "how_to_complete": "Compute MD5 by streaming download."
+    },
+    {
+      "component_type": "http://mlcommons.org/croissant/Field",
+      "id": "bindingdb/binding_data/version_fields",
+      "reason": "The download page mentions that downloads now include 'publication date and BindingDB curation date' to help with AI training, but these are already captured in the existing 'Date of publication' and 'Date in BindingDB' TSV columns. No additional fields are missing.",
+      "how_to_complete": "N/A \u2014 already documented."
+    }
+  ]
+}

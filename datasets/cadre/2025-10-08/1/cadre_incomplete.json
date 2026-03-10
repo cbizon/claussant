@@ -1,0 +1,48 @@
+{
+  "description": "Croissant components for CADRE that could not be completed from crawled pages alone.",
+  "generated": "2026-03-10",
+  "items": [
+    {
+      "component_type": "https://schema.org/Dataset",
+      "id": "cadre/license",
+      "reason": "No formal license is stated anywhere on the cadre.med.wisc.edu domain. The site does not link to a Creative Commons license, a data use agreement page, or any other explicit license terms for the data or data dictionaries.",
+      "how_to_complete": "Contact gmcmahan@wisc.edu or check with the CADRE team to obtain the applicable license identifier (e.g. CC BY 4.0, CC0) or a data use agreement URL."
+    },
+    {
+      "component_type": "https://schema.org/Dataset",
+      "id": "cadre/citeAs",
+      "reason": "The site does not include a 'How to cite' instruction on any page. The research page lists multiple CADRE and CREW publications but does not designate one as the primary citation for the repository.",
+      "how_to_complete": "Ask the CADRE team which publication (if any) should be cited when using CADRE data. Candidate papers visible on the research page include: Gern et al. 2019 'The Children's Respiratory and Environmental Workgroup (CREW) Birth Cohort Consortium: Design, Methods, and Study Population' (Respir Res, PMID 31182091) for the underlying consortium, and Gern and Martinez 2025 (PMID 39956281) for CADRE-specific work."
+    },
+    {
+      "component_type": "https://schema.org/Dataset",
+      "id": "cadre/isAccessibleForFree",
+      "reason": "The site does not state whether there is a cost or access restriction for the harmonized participant dataset. The data element dictionary CSVs are freely downloadable, but the harmonized dataset itself has no public download link.",
+      "how_to_complete": "Contact the CADRE team to confirm whether the harmonized dataset is freely available upon request, requires a data use agreement, or involves any cost."
+    },
+    {
+      "component_type": "http://mlcommons.org/croissant/FileObject",
+      "id": "cadre/harmonized_dataset",
+      "reason": "The harmonized participant dataset (containing raw and harmonized variables for ~9,600 participants across 13+ cohorts) is not publicly downloadable. No direct download URL is present on the site. Access appears to require contacting the CADRE team. No schema, file format, or checksum can be confirmed without access.",
+      "how_to_complete": "Submit a data access request via https://redcap.wisc.edu/surveys/?s=AYTTTFACXLP83XYL or by emailing gmcmahan@wisc.edu. Once access is granted, document the file format (CSV, SAS, R, etc.), record count, variable count, and any partition structure (e.g. one file per cohort)."
+    },
+    {
+      "component_type": "http://mlcommons.org/croissant/RecordSet",
+      "id": "cadre/harmonized_participant_data",
+      "reason": "Without access to the harmonized dataset files, the RecordSet schema (field names, data types, and descriptions beyond the data dictionary CSVs) cannot be fully confirmed. The Core and Ancillary data element CSVs describe variable names and response options but are themselves data dictionaries, not the harmonized participant records.",
+      "how_to_complete": "After obtaining data access, extract the header row(s) from the harmonized data files to document each field with its actual column name, data type, and mapping to the data dictionary entries."
+    },
+    {
+      "component_type": "https://schema.org/Dataset",
+      "id": "cadre/identifier",
+      "reason": "No RRID, DOI, or other persistent identifier for CADRE was found on any crawled page.",
+      "how_to_complete": "Check whether CADRE has been registered with SciCrunch (RRID) or deposited in a repository that assigns DOIs (e.g. Zenodo, Figshare)."
+    },
+    {
+      "component_type": "https://schema.org/Dataset",
+      "id": "cadre/datePublished",
+      "reason": "No explicit publication date for CADRE is stated on the site.",
+      "how_to_complete": "The CADRE team can provide the date the repository was first made available. Alternatively, the oldest CADRE-specific publication date could serve as a proxy."
+    }
+  ]
+}

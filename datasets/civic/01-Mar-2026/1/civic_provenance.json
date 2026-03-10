@@ -1,0 +1,334 @@
+{
+  "description": "Provenance records for civic_croissant.json. Each entry maps a Croissant element to the URL(s) from which the information was extracted.",
+  "crawl_date": "2026-03-10",
+  "crawled_urls": [
+    {
+      "id": "src_homepage",
+      "url": "https://civicdb.org",
+      "anchor": null,
+      "description": "CIViC homepage; confirmed site title and URL. SPA shell only — navigation discovered via JS bundle."
+    },
+    {
+      "id": "src_js_bundle",
+      "url": "https://civicdb.org/main.b495ab7b9bdcd273.js",
+      "anchor": null,
+      "description": "Angular SPA main bundle; used to discover internal API paths (/api/graphql, /api/status) and version string 3.13.8."
+    },
+    {
+      "id": "src_api_status",
+      "url": "https://civicdb.org/api/status",
+      "anchor": null,
+      "description": "Live status endpoint confirming production environment."
+    },
+    {
+      "id": "src_graphql_introspect",
+      "url": "https://civicdb.org/api/graphql",
+      "anchor": null,
+      "description": "GraphQL introspection queries revealing DataRelease and DownloadableFile types; DataRelease query returning all release names and file paths; CivicTimepointStats query returning all-time entity counts."
+    },
+    {
+      "id": "src_docs_index",
+      "url": "https://civic.readthedocs.io/en/latest/",
+      "anchor": null,
+      "description": "CIViC official documentation index (docs.civicdb.org redirects here); used to discover all documentation sub-pages."
+    },
+    {
+      "id": "src_faq",
+      "url": "https://civic.readthedocs.io/en/latest/about/faq.html",
+      "anchor": "#how-do-i-cite-civic",
+      "description": "FAQ page; source for citeAs citation, description of CIViC, license statement, and conditionsOfAccess disclaimer."
+    },
+    {
+      "id": "src_citations",
+      "url": "https://civic.readthedocs.io/en/latest/about/citations.html",
+      "anchor": null,
+      "description": "Citations page; confirms primary publication (PMID 28138153, 2017, Nature Genetics), license statement, and creator attribution."
+    },
+    {
+      "id": "src_acknowledgements",
+      "url": "https://civic.readthedocs.io/en/latest/about/acknowledgements.html",
+      "anchor": "#funding",
+      "description": "Acknowledgements page; source for funder names (NCI award numbers U24CA305456, U24CA275783, R50CA305824; NCATS award UL1TR002345)."
+    },
+    {
+      "id": "src_data_releases_docs",
+      "url": "https://civic.readthedocs.io/en/latest/using/data_releases.html",
+      "anchor": null,
+      "description": "Data releases documentation; confirms nightly and monthly TSV/VCF releases."
+    },
+    {
+      "id": "src_evidence_model",
+      "url": "https://civic.readthedocs.io/en/latest/model/evidence.html",
+      "anchor": null,
+      "description": "Evidence knowledge model documentation; source for evidence field descriptions."
+    },
+    {
+      "id": "src_file_evidence_accepted",
+      "url": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-AcceptedClinicalEvidenceSummaries.tsv",
+      "anchor": null,
+      "description": "Accepted evidence TSV file (01-Mar-2026); header row extracted to identify all 25 column names. MD5 checksum computed by streaming download."
+    },
+    {
+      "id": "src_file_assertion_accepted",
+      "url": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-AcceptedAssertionSummaries.tsv",
+      "anchor": null,
+      "description": "Accepted assertion TSV file (01-Mar-2026); header row extracted to identify all 24 column names. MD5 computed by streaming."
+    },
+    {
+      "id": "src_file_feature",
+      "url": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-FeatureSummaries.tsv",
+      "anchor": null,
+      "description": "Feature TSV file (01-Mar-2026); header row extracted to identify all 18 column names. MD5 computed by streaming."
+    },
+    {
+      "id": "src_file_variant",
+      "url": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-VariantSummaries.tsv",
+      "anchor": null,
+      "description": "Variant TSV file (01-Mar-2026); header row extracted to identify all 39 column names. MD5 computed by streaming."
+    },
+    {
+      "id": "src_file_molecular_profile",
+      "url": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-MolecularProfileSummaries.tsv",
+      "anchor": null,
+      "description": "Molecular profile TSV file (01-Mar-2026); header row extracted to identify all 13 column names. MD5 computed by streaming."
+    },
+    {
+      "id": "src_file_variant_group",
+      "url": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-VariantGroupSummaries.tsv",
+      "anchor": null,
+      "description": "Variant group TSV file (01-Mar-2026); header row extracted to identify all 6 column names. MD5 computed by streaming."
+    },
+    {
+      "id": "src_file_evidence_accepted_submitted",
+      "url": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-AcceptedAndSubmittedClinicalEvidenceSummaries.tsv",
+      "anchor": null,
+      "description": "Accepted+submitted evidence TSV file (01-Mar-2026); header extracted, confirmed same 25 columns as accepted-only file. MD5 computed by streaming."
+    },
+    {
+      "id": "src_file_vcf",
+      "url": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-civic_accepted.vcf",
+      "anchor": null,
+      "description": "Accepted variants VCF file (01-Mar-2026); header lines extracted showing VCFv4.2 format, GRCh37 reference, source CIViCpy_v5.2.0, fileDate 20260301, and INFO field definitions (GN, VT, CSQ). MD5 computed by streaming."
+    }
+  ],
+  "claims": [
+    {
+      "croissant_id": "civic/name",
+      "value": "CIViC_-_Clinical_Interpretation_of_Variants_in_Cancer",
+      "sources": ["src_homepage"],
+      "notes": "Direct quote from browser title tag: 'CIViC - Clinical Interpretation of Variants in Cancer'. Spaces replaced with underscores per Croissant naming rules."
+    },
+    {
+      "croissant_id": "civic/description",
+      "value": "CIViC is an open access, open source, community-driven web resource for Clinical Interpretation of Variants in Cancer. Our goal is to enable precision medicine by providing an educational forum to disseminate knowledge and encourage active discussion of the clinical significance of cancer genome alterations.",
+      "sources": ["src_faq"],
+      "notes": "Direct quote from FAQ page under 'What is CIViC?'"
+    },
+    {
+      "croissant_id": "civic/url",
+      "value": "https://civicdb.org",
+      "sources": ["src_homepage"],
+      "notes": "Canonical URL of the CIViC resource."
+    },
+    {
+      "croissant_id": "civic/license",
+      "value": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sources": ["src_faq", "src_citations"],
+      "notes": "FAQ page states: 'The content of CIViC, hosted by Washington University School of Medicine is released under the Creative Commons Public Domain Dedication (CC0 1.0 Universal)'. Citations page footer states: 'CIViC by The McDonnell Genome Institute at Washington University School of Medicine is licensed under a Creative Commons Public Domain Dedication (CC0 1.0 Universal)'."
+    },
+    {
+      "croissant_id": "civic/version",
+      "value": "01-Mar-2026",
+      "sources": ["src_graphql_introspect"],
+      "notes": "Most recent monthly release name returned by the dataReleases GraphQL query as of crawl date."
+    },
+    {
+      "croissant_id": "civic/dateModified",
+      "value": "2026-03-01",
+      "sources": ["src_graphql_introspect", "src_file_vcf"],
+      "notes": "Date derived from latest monthly release name '01-Mar-2026' and confirmed by VCF header field '##fileDate=20260301'."
+    },
+    {
+      "croissant_id": "civic/isAccessibleForFree",
+      "value": true,
+      "sources": ["src_faq", "src_citations"],
+      "notes": "CC0 license and publicly accessible download URLs confirm free access with no registration required."
+    },
+    {
+      "croissant_id": "civic/conditionsOfAccess",
+      "value": "CIViC is intended for purely research purposes. It should not be used for emergencies or medical or professional advice.",
+      "sources": ["src_faq", "src_citations"],
+      "notes": "Direct quote from FAQ page under 'Who is CIViC designed for?' and footer disclaimer on all docs pages."
+    },
+    {
+      "croissant_id": "civic/citeAs",
+      "value": "Griffith M, Spies NC, Krysiak K, ... Griffith OL. CIViC is a community knowledgebase... Nat Genet. 49, 170-174 (2017). doi:10.1038/ng.3774. PMID: 28138153.",
+      "sources": ["src_faq", "src_citations"],
+      "notes": "From FAQ page under 'How do I cite CIViC?'. Full author list preserved. Superscript markers (* for equal contribution, † for corresponding author) rendered as plain text artifacts in the HTML extraction and removed from the citation string. The source text has '2016' as the submission year before 'Nat Genet. 49, 170-174 (2017)'; only the publication year 2017 is used. The source text also has 'Spencer DH Wartman LD' (missing comma) — preserved as-is from source."
+    },
+    {
+      "croissant_id": "civic/creator",
+      "value": "The McDonnell Genome Institute at Washington University School of Medicine",
+      "sources": ["src_citations", "src_faq"],
+      "notes": "Direct quote from page footer: 'CIViC by The McDonnell Genome Institute at Washington University School of Medicine is licensed under a Creative Commons Public Domain Dedication (CC0 1.0 Universal)'."
+    },
+    {
+      "croissant_id": "civic/funder",
+      "value": "[National Cancer Institute (NCI), National Center for Advancing Translational Sciences (NCATS)]",
+      "sources": ["src_acknowledgements"],
+      "notes": "From acknowledgements page: 'The CIViC project and ClinGen Somatic Cancer Biomedical Knowledgebase are currently supported by the National Institutes of Health (NIH) National Cancer Institute (NCI) under Award Numbers U24CA305456, U24CA275783, and R50CA305824, including a funding supplement from the NIH Office of Data Science Strategy (ODSS). CIViC is also supported by the Washington University Institute of Clinical and Translational Sciences grant UL1TR002345 from the National Center for Advancing Translational Sciences (NCATS) of the NIH.'"
+    },
+    {
+      "croissant_id": "civic/evidence_accepted_tsv/contentUrl",
+      "value": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-AcceptedClinicalEvidenceSummaries.tsv",
+      "sources": ["src_graphql_introspect"],
+      "notes": "Path from GraphQL dataReleases query field acceptedEvidenceTsv.path for release '01-Mar-2026', prepended with https://civicdb.org."
+    },
+    {
+      "croissant_id": "civic/evidence_accepted_tsv/md5",
+      "value": "22a947ffe9f5f22bf02cdd42a76566fd",
+      "sources": ["src_file_evidence_accepted"],
+      "notes": "MD5 computed by full streaming download using Python hashlib (3,996,956 bytes)."
+    },
+    {
+      "croissant_id": "civic/assertion_accepted_tsv/contentUrl",
+      "value": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-AcceptedAssertionSummaries.tsv",
+      "sources": ["src_graphql_introspect"],
+      "notes": "Path from GraphQL dataReleases query field acceptedAssertionTsv.path for release '01-Mar-2026'."
+    },
+    {
+      "croissant_id": "civic/assertion_accepted_tsv/md5",
+      "value": "8dea4c17ac4aeb2376d30bd06c431df5",
+      "sources": ["src_file_assertion_accepted"],
+      "notes": "MD5 computed by full streaming download (155,683 bytes)."
+    },
+    {
+      "croissant_id": "civic/feature_tsv/contentUrl",
+      "value": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-FeatureSummaries.tsv",
+      "sources": ["src_graphql_introspect"],
+      "notes": "Path from GraphQL dataReleases query field featureTsv.path for release '01-Mar-2026'."
+    },
+    {
+      "croissant_id": "civic/feature_tsv/md5",
+      "value": "f24f49873a36a188359d3da107573428",
+      "sources": ["src_file_feature"],
+      "notes": "MD5 computed by full streaming download (178,885 bytes)."
+    },
+    {
+      "croissant_id": "civic/variant_tsv/contentUrl",
+      "value": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-VariantSummaries.tsv",
+      "sources": ["src_graphql_introspect"],
+      "notes": "Path from GraphQL dataReleases query field variantTsv.path for release '01-Mar-2026'."
+    },
+    {
+      "croissant_id": "civic/variant_tsv/md5",
+      "value": "f6a9baa37983dcb150da0610df4e898c",
+      "sources": ["src_file_variant"],
+      "notes": "MD5 computed by full streaming download (572,665 bytes)."
+    },
+    {
+      "croissant_id": "civic/molecular_profile_tsv/contentUrl",
+      "value": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-MolecularProfileSummaries.tsv",
+      "sources": ["src_graphql_introspect"],
+      "notes": "Path from GraphQL dataReleases query field molecularProfileTsv.path for release '01-Mar-2026'."
+    },
+    {
+      "croissant_id": "civic/molecular_profile_tsv/md5",
+      "value": "3783f0de5da85debf9580bfbcfc03df2",
+      "sources": ["src_file_molecular_profile"],
+      "notes": "MD5 computed by full streaming download (655,825 bytes)."
+    },
+    {
+      "croissant_id": "civic/variant_group_tsv/contentUrl",
+      "value": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-VariantGroupSummaries.tsv",
+      "sources": ["src_graphql_introspect"],
+      "notes": "Path from GraphQL dataReleases query field variantGroupTsv.path for release '01-Mar-2026'."
+    },
+    {
+      "croissant_id": "civic/variant_group_tsv/md5",
+      "value": "e3f96e7e585f30ca84fdb8335f8e8bb5",
+      "sources": ["src_file_variant_group"],
+      "notes": "MD5 computed by full streaming download (10,453 bytes)."
+    },
+    {
+      "croissant_id": "civic/evidence_accepted_submitted_tsv/contentUrl",
+      "value": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-AcceptedAndSubmittedClinicalEvidenceSummaries.tsv",
+      "sources": ["src_graphql_introspect"],
+      "notes": "Path from GraphQL dataReleases query field acceptedAndSubmittedEvidenceTsv.path for release '01-Mar-2026'."
+    },
+    {
+      "croissant_id": "civic/evidence_accepted_submitted_tsv/md5",
+      "value": "8f43972e73f14a1ba39c154ccd66ca2c",
+      "sources": ["src_file_evidence_accepted_submitted"],
+      "notes": "MD5 computed by full streaming download (9,618,634 bytes)."
+    },
+    {
+      "croissant_id": "civic/accepted_vcf/contentUrl",
+      "value": "https://civicdb.org/downloads/01-Mar-2026/01-Mar-2026-civic_accepted.vcf",
+      "sources": ["src_graphql_introspect"],
+      "notes": "Path from GraphQL dataReleases query field acceptedVariantsVcf.path for release '01-Mar-2026'."
+    },
+    {
+      "croissant_id": "civic/accepted_vcf/md5",
+      "value": "a13039deed301a486e704875b833e874",
+      "sources": ["src_file_vcf"],
+      "notes": "MD5 computed by full streaming download (1,328,540 bytes)."
+    },
+    {
+      "croissant_id": "civic/evidence_accepted/field",
+      "value": "25 columns: molecular_profile, molecular_profile_id, disease, doid, phenotypes, therapies, therapy_interaction_type, evidence_type, evidence_direction, evidence_level, significance, evidence_statement, citation_id, source_type, asco_abstract_id, citation, nct_ids, rating, evidence_status, evidence_id, variant_origin, last_review_date, evidence_civic_url, molecular_profile_civic_url, is_flagged",
+      "sources": ["src_file_evidence_accepted", "src_evidence_model"],
+      "notes": "Column names extracted from TSV header row. Field descriptions sourced from the evidence knowledge model documentation page."
+    },
+    {
+      "croissant_id": "civic/assertion_accepted/field",
+      "value": "24 columns: molecular_profile, molecular_profile_id, disease, doid, phenotypes, therapies, assertion_type, assertion_direction, significance, acmg_codes, amp_category, nccn_guideline, nccn_guideline_version, regulatory_approval, fda_companion_test, assertion_summary, assertion_description, assertion_id, evidence_item_ids, last_review_date, assertion_civic_url, evidence_items_civic_url, molecular_profile_civic_url, is_flagged",
+      "sources": ["src_file_assertion_accepted"],
+      "notes": "Column names extracted from TSV header row."
+    },
+    {
+      "croissant_id": "civic/feature/field",
+      "value": "18 columns: feature_id, feature_civic_url, feature_type, name, feature_aliases, description, last_review_date, is_flagged, entrez_id, ncit_id, five_prime_partner_status, three_prime_partner_status, five_prime_gene_id, five_prime_gene_name, five_prime_gene_entrez_id, three_prime_gene_id, three_prime_gene_name, three_prime_gene_entrez_id",
+      "sources": ["src_file_feature"],
+      "notes": "Column names extracted from TSV header row."
+    },
+    {
+      "croissant_id": "civic/variant/field",
+      "value": "39 columns: variant_id, variant_civic_url, feature_type, feature_id, feature_name, feature_civic_url, variant, variant_aliases, is_flagged, variant_groups, variant_types, single_variant_molecular_profile_id, last_review_date, gene, entrez_id, chromosome, start, stop, reference_bases, variant_bases, representative_transcript, ensembl_version, reference_build, hgvs_descriptions, allele_registry_id, clinvar_ids, ncit_id, 5_prime_partner_status, 5_prime_partner, 3_prime_partner_status, 3_prime_partner, vicc_compliant_name, 5_prime_transcript, 5_prime_end_exon, 5_prime_exon_offset, 5_prime_exon_offset_direction, 3_prime_transcript, 3_prime_start_exon, 3_prime_exon_offset, 3_prime_exon_offset_direction",
+      "sources": ["src_file_variant"],
+      "notes": "Column names extracted from TSV header row."
+    },
+    {
+      "croissant_id": "civic/molecular_profile/field",
+      "value": "13 columns: name, molecular_profile_id, summary, variant_ids, variants_civic_url, evidence_score, evidence_item_ids, evidence_items_civic_url, assertion_ids, assertions_civic_url, aliases, last_review_date, is_flagged",
+      "sources": ["src_file_molecular_profile"],
+      "notes": "Column names extracted from TSV header row."
+    },
+    {
+      "croissant_id": "civic/variant_group/field",
+      "value": "6 columns: variant_group_id, variant_group_civic_url, variant_group, description, last_review_date, is_flagged",
+      "sources": ["src_file_variant_group"],
+      "notes": "Column names extracted from TSV header row."
+    },
+    {
+      "croissant_id": "civic/accepted_vcf/description",
+      "value": "VCF v4.2 format with GRCh37 reference, generated by CIViCpy v5.2.0",
+      "sources": ["src_file_vcf"],
+      "notes": "From VCF header lines: '##fileformat=VCFv4.2', '##fileDate=20260301', '##reference=ftp://ftp.ncbi.nih.gov/genbank/genomes/.../GRCh37-lite.fa.gz', '##source=CIViCpy_v5.2.0'. INFO field CSQ format string with 39 sub-fields confirmed from ##INFO header line."
+    }
+  ],
+  "unverified_or_inferred": [
+    {
+      "croissant_id": "civic/datePublished",
+      "note": "No explicit dataset launch date found on crawled pages. The original CIViC paper was published in 2017 (PMID 28138153) but the dataset itself predates the publication. Omitted from Croissant file."
+    },
+    {
+      "croissant_id": "civic/identifier",
+      "note": "No RRID found on any crawled page from the civicdb.org or docs.civicdb.org domain. Omitted from Croissant file."
+    },
+    {
+      "croissant_id": "civic/temporalCoverage",
+      "note": "No explicit temporal coverage statement found. The dataset covers variants in cancer from literature across multiple decades but no formal coverage range is stated on any crawled page."
+    }
+  ]
+}

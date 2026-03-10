@@ -1,0 +1,30 @@
+{
+  "description": "Croissant components for CIViC that could not be completed from crawled pages alone.",
+  "generated": "2026-03-10",
+  "items": [
+    {
+      "component_type": "https://schema.org/Dataset",
+      "id": "civic/datePublished",
+      "reason": "No explicit dataset launch date found on any crawled page. The original CIViC paper was published in 2017 (PMID 28138153) but the database predates the publication. The validator recommends this field.",
+      "how_to_complete": "Check the CIViC GitHub repository or contact the CIViC team to determine the original public launch date of the database."
+    },
+    {
+      "component_type": "https://schema.org/Dataset",
+      "id": "civic/identifier",
+      "reason": "No RRID (Research Resource Identifier) was found on any crawled page from the civicdb.org or docs.civicdb.org domains.",
+      "how_to_complete": "Search the RRID portal (scicrunch.org/resources) for 'CIViC' to find the RRID, or check with the CIViC team."
+    },
+    {
+      "component_type": "https://schema.org/Dataset",
+      "id": "civic/temporalCoverage",
+      "reason": "No formal temporal coverage statement found on any crawled page. The dataset covers cancer variant evidence from literature spanning decades.",
+      "how_to_complete": "Determine the earliest publication year represented in the evidence items (available via the GraphQL API) to establish the start of coverage."
+    },
+    {
+      "component_type": "http://mlcommons.org/croissant/FileObject",
+      "id": "civic/nightly_release_files",
+      "reason": "The nightly release includes additional files not present in the monthly release: AcceptedAndSubmittedAssertionSummaries.tsv and AcceptedAndSubmittedVariantsVcf. These files exist only in the nightly build. Their checksums change nightly so a stable MD5 cannot be recorded.",
+      "how_to_complete": "Headers can be extracted from https://civicdb.org/downloads/nightly/nightly-AcceptedAndSubmittedAssertionSummaries.tsv and the nightly VCF. Checksums would need to be re-computed at download time."
+    }
+  ]
+}

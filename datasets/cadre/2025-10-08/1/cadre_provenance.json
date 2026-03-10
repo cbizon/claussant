@@ -1,0 +1,228 @@
+{
+  "description": "Provenance records for cadre_croissant.json. Each entry maps a Croissant element to the URL(s) from which the information was extracted, including page anchors where applicable.",
+  "crawl_date": "2026-03-10",
+  "crawled_urls": [
+    {
+      "id": "src_homepage",
+      "url": "https://cadre.med.wisc.edu/",
+      "anchor": null,
+      "description": "Homepage providing the dataset name, tagline, and primary description of CADRE's purpose and approach."
+    },
+    {
+      "id": "src_about",
+      "url": "https://cadre.med.wisc.edu/about/",
+      "anchor": null,
+      "description": "About page providing background, overview, and funding sources for CADRE."
+    },
+    {
+      "id": "src_data",
+      "url": "https://cadre.med.wisc.edu/data/",
+      "anchor": null,
+      "description": "Data page describing dataset contents, harmonized variables, and links to the core and ancillary data element CSV files."
+    },
+    {
+      "id": "src_sites",
+      "url": "https://cadre.med.wisc.edu/sites/",
+      "anchor": "#cohorts",
+      "description": "Sites page listing all contributing birth cohorts (with founding years and participant counts) and the three science centers."
+    },
+    {
+      "id": "src_research",
+      "url": "https://cadre.med.wisc.edu/research/",
+      "anchor": null,
+      "description": "Research page listing CADRE publications and CREW publications with PubMed links."
+    },
+    {
+      "id": "src_core_csv",
+      "url": "https://cadre.med.wisc.edu/wp-content/uploads/sites/2407/2026/01/CADRE_Core_Data_Elements_2025_10_07.csv",
+      "anchor": null,
+      "description": "Core Data Elements CSV file; header extracted to confirm column names: Data element, Description, Response options. MD5 computed via streaming download."
+    },
+    {
+      "id": "src_ancillary_csv",
+      "url": "https://cadre.med.wisc.edu/wp-content/uploads/sites/2407/2026/01/CADRE_Ancillary_Data_Elements_2025_10_08.csv",
+      "anchor": null,
+      "description": "Ancillary Data Elements CSV file; header extracted to confirm column names: Dataset, Dataset ordinal, Data element, Description, Response options. MD5 computed via streaming download."
+    }
+  ],
+  "claims": [
+    {
+      "croissant_id": "cadre/name",
+      "value": "Children's Allergy and Asthma Data Repository (CADRE)",
+      "sources": ["src_homepage"],
+      "notes": "Direct quote from page title and header: 'CADRE Children's Allergy and Asthma Data Repository'"
+    },
+    {
+      "croissant_id": "cadre/description",
+      "value": "The Children's Allergy and Asthma Data Repository (CADRE) is a centralized resource...",
+      "sources": ["src_homepage", "src_data", "src_about"],
+      "notes": "Opening paragraph from homepage: 'The Children's Allergy and Asthma Data Repository (CADRE) is a centralized resource created to address a critical gap in asthma research: identifying the risk factors and biological mechanisms that lead to childhood asthma. By uniting data from various cohorts, CADRE empowers researchers to uncover insights that individual studies alone cannot provide.' Population size (9,600 newborns, 40+ year timespan) from src_data."
+    },
+    {
+      "croissant_id": "cadre/url",
+      "value": "https://cadre.med.wisc.edu/",
+      "sources": ["src_homepage"],
+      "notes": "Canonical homepage URL."
+    },
+    {
+      "croissant_id": "cadre/version",
+      "value": "2025-10-08",
+      "sources": ["src_ancillary_csv"],
+      "notes": "No explicit dataset version string published on the site. Version derived from the most recent data element file date embedded in the filename CADRE_Ancillary_Data_Elements_2025_10_08.csv."
+    },
+    {
+      "croissant_id": "cadre/dateModified",
+      "value": "2025-10-08",
+      "sources": ["src_ancillary_csv"],
+      "notes": "Inferred from filename date CADRE_Ancillary_Data_Elements_2025_10_08.csv, the most recently dated file found on the site."
+    },
+    {
+      "croissant_id": "cadre/keywords",
+      "value": ["childhood asthma", "allergy", "birth cohort", "harmonized data", "CREW", "epidemiology", "environmental exposures", "NIH", "NIAID"],
+      "sources": ["src_homepage", "src_about", "src_data"],
+      "notes": "Keywords derived from repeated terminology across homepage, about, and data pages."
+    },
+    {
+      "croissant_id": "cadre/conditionsOfAccess",
+      "value": "Data dictionaries describing the harmonized variables are publicly available for download. Access to the harmonized participant dataset requires contacting the CADRE team via the online contact form at https://redcap.wisc.edu/surveys/?s=AYTTTFACXLP83XYL or by email at gmcmahan@wisc.edu.",
+      "sources": ["src_homepage", "src_data"],
+      "notes": "REDCap contact form URL https://redcap.wisc.edu/surveys/?s=AYTTTFACXLP83XYL appears in navigation of all pages as 'Contact Us'. Email gmcmahan@wisc.edu from page footer. No explicit data access policy page found; data dictionaries are directly downloadable."
+    },
+    {
+      "croissant_id": "cadre/creator",
+      "value": "University of Wisconsin–Madison",
+      "sources": ["src_sites", "src_about"],
+      "notes": "Bioinformatics science center at UW-Madison (led by Jomol Mathew) operates the CADRE Data System per the sites page. CADRE is hosted at cadre.med.wisc.edu and the site is built using UW Theme Classic."
+    },
+    {
+      "croissant_id": "cadre/funder",
+      "value": ["National Institute of Allergy and Infectious Diseases (NIAID), Division of Allergy Immunology and Transplantation and Office of Data Science and Emerging Technologies", "NIH Office of the Director, Office of Data Science Strategy"],
+      "sources": ["src_about"],
+      "notes": "Direct quote from About page: 'The CADRE program is funded by the National Institute of Allergy and Infectious Diseases (Division of Allergy Immunology and Transplantation and Office of Data Science and Emerging Technologies) and the NIH Office of the Director (Office of Data Science Strategy).'"
+    },
+    {
+      "croissant_id": "cadre/maintainer",
+      "value": "gmcmahan@wisc.edu",
+      "sources": ["src_homepage"],
+      "notes": "From footer of all pages: 'Website feedback, questions or accessibility issues: gmcmahan@wisc.edu'"
+    },
+    {
+      "croissant_id": "cadre/temporalCoverage",
+      "value": "1980/..",
+      "sources": ["src_sites"],
+      "notes": "Oldest cohort is TCRS (Tucson Children's Respiratory Study) 'established in 1980'. Enrollment in newer cohorts (e.g. CANOE, established 2021) is ongoing. ISO 8601 interval '1980/..' denotes 1980 to present."
+    },
+    {
+      "croissant_id": "cadre/spatialCoverage",
+      "value": "United States",
+      "sources": ["src_sites"],
+      "notes": "Cohort sites span Detroit MI, Madison WI, Nashville TN, St. Louis MO, Cincinnati OH, New York NY, Boston MA, Tucson AZ, Baltimore MD, and other US cities."
+    },
+    {
+      "croissant_id": "cadre/core_data_elements_csv/contentUrl",
+      "value": "https://cadre.med.wisc.edu/wp-content/uploads/sites/2407/2026/01/CADRE_Core_Data_Elements_2025_10_07.csv",
+      "sources": ["src_data"],
+      "notes": "Exact href of the 'CADRE Core Data Elements Downloadable Spreadsheet' link on the data page."
+    },
+    {
+      "croissant_id": "cadre/core_data_elements_csv/md5",
+      "value": "ed587ce2bc8f719108f549a17219626e",
+      "sources": ["src_core_csv"],
+      "notes": "MD5 computed via full streaming download of the CSV file."
+    },
+    {
+      "croissant_id": "cadre/core_data_elements_csv/version",
+      "value": "2025-10-07",
+      "sources": ["src_core_csv"],
+      "notes": "Date embedded in filename: CADRE_Core_Data_Elements_2025_10_07.csv"
+    },
+    {
+      "croissant_id": "cadre/ancillary_data_elements_csv/contentUrl",
+      "value": "https://cadre.med.wisc.edu/wp-content/uploads/sites/2407/2026/01/CADRE_Ancillary_Data_Elements_2025_10_08.csv",
+      "sources": ["src_data"],
+      "notes": "Exact href of the 'CADRE Ancillary Data Elements Downloadable Spreadsheet' link on the data page."
+    },
+    {
+      "croissant_id": "cadre/ancillary_data_elements_csv/md5",
+      "value": "b484d720f00f92025228e21eb87b0dba",
+      "sources": ["src_ancillary_csv"],
+      "notes": "MD5 computed via full streaming download of the CSV file."
+    },
+    {
+      "croissant_id": "cadre/ancillary_data_elements_csv/version",
+      "value": "2025-10-08",
+      "sources": ["src_ancillary_csv"],
+      "notes": "Date embedded in filename: CADRE_Ancillary_Data_Elements_2025_10_08.csv"
+    },
+    {
+      "croissant_id": "cadre/core_data_elements/Data_element",
+      "value": "column: 'Data element'",
+      "sources": ["src_core_csv"],
+      "notes": "Column name confirmed by downloading the first row of the CSV file."
+    },
+    {
+      "croissant_id": "cadre/core_data_elements/Description",
+      "value": "column: 'Description'",
+      "sources": ["src_core_csv"],
+      "notes": "Column name confirmed by downloading the first row of the CSV file."
+    },
+    {
+      "croissant_id": "cadre/core_data_elements/Response_options",
+      "value": "column: 'Response options'",
+      "sources": ["src_core_csv"],
+      "notes": "Column name confirmed by downloading the first row of the CSV file."
+    },
+    {
+      "croissant_id": "cadre/ancillary_data_elements/Dataset",
+      "value": "column: 'Dataset'",
+      "sources": ["src_ancillary_csv"],
+      "notes": "Column name confirmed by downloading the first row of the CSV file."
+    },
+    {
+      "croissant_id": "cadre/ancillary_data_elements/Dataset_ordinal",
+      "value": "column: 'Dataset ordinal'",
+      "sources": ["src_ancillary_csv"],
+      "notes": "Column name confirmed by downloading the first row of the CSV file."
+    },
+    {
+      "croissant_id": "cadre/ancillary_data_elements/Data_element",
+      "value": "column: 'Data element'",
+      "sources": ["src_ancillary_csv"],
+      "notes": "Column name confirmed by downloading the first row of the CSV file."
+    },
+    {
+      "croissant_id": "cadre/ancillary_data_elements/Description",
+      "value": "column: 'Description'",
+      "sources": ["src_ancillary_csv"],
+      "notes": "Column name confirmed by downloading the first row of the CSV file."
+    },
+    {
+      "croissant_id": "cadre/ancillary_data_elements/Response_options",
+      "value": "column: 'Response options'",
+      "sources": ["src_ancillary_csv"],
+      "notes": "Column name confirmed by downloading the first row of the CSV file."
+    }
+  ],
+  "unverified_or_inferred": [
+    {
+      "croissant_id": "cadre/version",
+      "note": "No explicit dataset version is published on the site. Version '2025-10-08' is inferred from the most recent date in the downloadable data element filenames."
+    },
+    {
+      "croissant_id": "cadre/dateModified",
+      "note": "No explicit last-modified date is shown on the site. Date inferred from filename CADRE_Ancillary_Data_Elements_2025_10_08.csv."
+    },
+    {
+      "croissant_id": "cadre/temporalCoverage",
+      "note": "Start year 1980 is taken from TCRS founding year. 'Ongoing' end date inferred because multiple cohorts are described as having ongoing follow-up."
+    },
+    {
+      "croissant_id": "cadre/conditionsOfAccess",
+      "note": "No explicit data access policy page found. The REDCap 'Contact Us' form is the only mechanism identified for inquiring about data access. It is not confirmed whether the harmonized dataset can be formally requested or requires a data use agreement."
+    },
+    {
+      "croissant_id": "cadre/maintainer",
+      "note": "gmcmahan@wisc.edu is listed as a site feedback/accessibility contact in the page footer and is not explicitly identified as the dataset maintainer."
+    }
+  ]
+}
