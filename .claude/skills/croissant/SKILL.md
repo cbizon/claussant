@@ -69,13 +69,15 @@ Work in three strict phases. **Do not write any output files until Phase 3.**
 
 Crawl the site top-down. **Never guess URLs.** Always extract actual links from a page before fetching any subpage.
 
-> **Path note:** The `references/` scripts live in the skill's own directory, not in the working directory. The skill invocation message always begins with a line like:
-> `Base directory for this skill: /path/to/skills/croissant`
-> Read that path and set:
+> **Path note:** The `references/` scripts live at `.claude/skills/croissant/references`
+> within the repository root — not in the working directory. The `/robocroissant` command
+> instructs you to run `pwd` and construct the absolute path before any other step. Use
+> that value as `SKILL_REF` throughout:
 > ```bash
-> SKILL_REF="/path/to/skills/croissant/references"
+> SKILL_REF="$(pwd)/.claude/skills/croissant/references"
 > ```
-> Then call `python3 $SKILL_REF/fetch.py ...` and `python3 $SKILL_REF/extract.py ...` throughout. Never hardcode a username or home directory.
+> Then call `python3 $SKILL_REF/fetch.py ...` and `python3 $SKILL_REF/extract.py ...`
+> throughout. Never hardcode a username or home directory.
 
 #### Step 1.0 — Discover real URLs from the root
 
