@@ -20,7 +20,7 @@ This repo ships a Claude Code slash command that generates a complete Croissant 
 /robocroissant https://www.bindingdb.org
 ```
 
-The command follows a strict three-phase pipeline:
+The command follows a strict four-phase pipeline:
 
 ### Phase 1 — Crawl and Inventory
 
