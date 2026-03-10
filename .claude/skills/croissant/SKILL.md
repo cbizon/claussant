@@ -59,9 +59,9 @@ This applies to everything: field names, data types, record counts, license vers
 
 Web search (`site:example.org`) is permitted only to discover real URLs on the authoritative domain — not to find facts from external sources. If a web search returns external pages with schema or field information, ignore those results.
 
-## Three-Phase Execution
+## Four-Phase Execution
 
-Work in three strict phases. **Do not write any output files until Phase 3.**
+Work in four strict phases. **Do not write any output files until Phase 3.**
 
 ---
 
